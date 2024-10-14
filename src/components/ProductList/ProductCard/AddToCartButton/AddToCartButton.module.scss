@@ -1,0 +1,6 @@
+@import '/src/utils/css/Variables';
+
+.button {
+  @include button($clr-blackish-red, $clr-white, 1px solid $clr-blackish-red);
+  @include button-hover($clr-red, $clr-white, none);
+}

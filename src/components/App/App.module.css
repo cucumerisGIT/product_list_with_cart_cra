@@ -1,0 +1,25 @@
+/* COLORS */
+/* BREAKPOINTS */
+/* FONT */
+/* BORDER */
+/* PRODUCTS */
+/* SHIFTING */
+/* MIXINS */
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  min-height: 100dvh;
+  height: 100%;
+  padding: 2rem clamp(1rem, 5dvw, 5rem);
+  background: hsl(13, 31%, 94%);
+}
+
+@media (min-width: 700px) {
+  .app {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,84 @@
+/* COLORS */
+
+$clr-red:             hsl(14, 86%, 42%);
+$clr-green:           hsl(159, 69%, 38%);
+$clr-white:           hsl(20, 50%, 98%);
+$clr-very-soft-pink:  hsl(13, 31%, 94%);
+$clr-rose:            hsl(14, 25%, 72%);
+$clr-soft-brown:      hsl(7, 20%, 60%);
+$clr-brown:           hsl(12, 20%, 44%);
+$clr-blackish-red:    hsl(14, 65%, 9%);
+
+/* BREAKPOINTS */
+
+$breakpoint-mobile: 375px;
+$breakpoint-tablet: 700px;
+$breakpoint-desktop: 1024px;
+
+/* FONT */
+
+// SIZE
+$font-size-default: 1rem;
+$font-size-small: .9rem;
+$font-size-mid: 1.2rem;
+$font-size-large: 1.5rem;
+$font-size-massiv: 3rem;
+
+// WEIGHT
+$font-weight-thin: 400;
+$font-weight-normal: 600;
+$font-weight-bold: 700;
+
+/* BORDER */
+
+$border-radius-subtle: 8px;
+$border-radius-pronounced: 16px;
+
+/* PRODUCTS */
+
+$min-width-product: 175px;
+$max-width-product: 325px;
+
+/* SHIFTING */
+
+$app-vertical-padding: 2rem;
+
+/* MIXINS */
+
+@mixin button($color, $bg-color, $border) {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  width: max(175px, 50%);
+  
+  padding: .5rem 1rem;
+
+  border: $border;
+  border-radius: 1.5rem;
+
+  font-size: $font-size-small;
+  font-weight: $font-weight-bold;
+
+  color: $color;
+  background: $bg-color;  
+}
+
+@mixin button-hover($color, $bg-color, $border) {
+  &:hover {
+    cursor: pointer;
+  
+    border: $border;
+  
+    color: $bg-color;
+    background: $color;
+  
+    * {
+      stroke: $bg-color;
+      fill: $bg-color;
+      color: $bg-color;
+    }
+  }
+}

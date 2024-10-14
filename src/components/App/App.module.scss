@@ -1,0 +1,23 @@
+@import '/src/utils/css/Variables';
+
+.app {  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+  min-height: 100dvh;
+  height: 100%;
+  
+  padding: $app-vertical-padding clamp(1rem, 5dvw, 5rem);
+
+  background: $clr-very-soft-pink;
+}
+
+@media (min-width: $breakpoint-tablet) {
+  .app {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}

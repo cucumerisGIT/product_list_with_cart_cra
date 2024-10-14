@@ -1,0 +1,67 @@
+/* COLORS */
+/* BREAKPOINTS */
+/* FONT */
+/* BORDER */
+/* PRODUCTS */
+/* SHIFTING */
+/* MIXINS */
+.shoppingCart {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  width: clamp(175px, 100%, 325px);
+  padding: 1.5rem;
+  border-radius: 8px;
+  background: hsl(20, 50%, 98%);
+}
+
+.title {
+  align-self: flex-start;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: hsl(14, 86%, 42%);
+}
+
+.emptyCartText {
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: hsl(12, 20%, 44%);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.carbonHint {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  background: hsl(13, 31%, 94%);
+}
+
+.carbonNeutral {
+  font-weight: 700;
+}
+
+.confirmOrder {
+  padding: 1rem;
+  border: none;
+  border-radius: 2rem;
+  color: hsl(20, 50%, 98%);
+  background: hsl(14, 86%, 42%);
+}
+.confirmOrder:hover {
+  cursor: pointer;
+  border: 1px solid hsl(14, 86%, 42%);
+  color: hsl(14, 86%, 42%);
+  background: hsl(20, 50%, 98%);
+}

@@ -1,0 +1,41 @@
+@import '/src/utils/css/Variables';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: $breakpoint-desktop;
+}
+
+.title {
+  align-self: flex-start;
+    
+  color: $clr-blackish-red;
+
+  font-size: $font-size-massiv;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: minmax($min-width-product, $max-width-product);
+  justify-items: center;
+  align-items: center;
+  gap: clamp(.25rem, .75rem, 1rem);
+}
+
+@media (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop) { 
+  .list {
+    grid-template-columns: repeat(2, minmax($min-width-product, $max-width-product));
+  } 
+}
+
+@media (min-width: $breakpoint-desktop) { 
+  .wrapper {
+    width: 100%;
+  }
+  
+  .list {
+    grid-template-columns: repeat(3, minmax($min-width-product, $max-width-product));
+  } 
+}

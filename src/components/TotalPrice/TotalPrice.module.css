@@ -1,0 +1,19 @@
+/* COLORS */
+/* BREAKPOINTS */
+/* FONT */
+/* BORDER */
+/* PRODUCTS */
+/* SHIFTING */
+/* MIXINS */
+.orderTotal {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.totalPrice {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: hsl(14, 65%, 9%);
+}

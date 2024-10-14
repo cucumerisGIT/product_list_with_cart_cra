@@ -1,0 +1,66 @@
+@import '/src/utils/css/Variables';
+
+/* VARIABLES */
+
+$picture-margin-bottom: 2rem;
+
+/* STYLE */
+
+.card {
+  height: 100%;
+  width: clamp($min-width-product, 100%, $max-width-product);
+}
+
+.pictureWrapper {
+  position: relative;
+
+  .button {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(50%);
+  }
+}
+
+.picture {
+  height: 100%;
+  width: 100%;
+
+  margin-bottom: $picture-margin-bottom;
+
+  .image {
+    object-fit: cover;
+    overflow: hidden;
+    
+    border: 2px solid transparent;
+    border-radius: $border-radius-subtle; 
+
+    &--selected {
+      border-color: $clr-red;
+    }
+  }
+}
+
+.category {
+  font-size: $font-size-small;
+
+  color: $clr-brown;
+}
+
+.name {
+  font-size: $font-size-mid;
+  font-weight: $font-weight-bold;
+
+  color: $clr-blackish-red;
+}
+
+.price {
+  font-size: $font-size-mid;
+  font-weight: $font-weight-normal;
+
+  color: $clr-red;
+}
+
+@media (min-width: $breakpoint-tablet) {
+
+}

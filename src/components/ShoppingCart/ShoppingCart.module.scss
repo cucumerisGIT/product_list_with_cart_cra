@@ -1,0 +1,79 @@
+@import '/src/utils/css/Variables';
+
+.shoppingCart {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+
+  width: clamp($min-width-product, 100%, $max-width-product);
+
+  padding: 1.5rem;
+  
+  border-radius: $border-radius-subtle;
+
+  background: $clr-white;
+}
+
+.title {
+  align-self: flex-start;
+
+  font-size: $font-size-large;
+  font-weight: $font-weight-bold;
+  
+  color: $clr-red;
+}
+
+.emptyCartText {
+  text-align: center;
+  
+  font-size: $font-size-small;
+  font-weight: $font-weight-normal;
+
+  color: $clr-brown;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.carbonHint {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: .5rem;
+  
+  padding: 1rem;
+
+  font-size: $font-size-small;
+  
+  border-radius: $border-radius-subtle;
+  
+  background: $clr-very-soft-pink;
+}
+
+.carbonNeutral {
+  font-weight: $font-weight-bold;
+}
+
+.confirmOrder {
+  padding: 1rem;
+
+  border: none;
+  border-radius: 2rem;
+
+  color: $clr-white;
+  background: $clr-red;
+  
+  &:hover {
+    cursor: pointer;
+  
+    border: 1px solid $clr-red;
+  
+    color: $clr-red;
+    background: $clr-white;
+  }
+}

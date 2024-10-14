@@ -1,0 +1,15 @@
+@import '/src/utils/css/Variables';
+
+.orderTotal {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.totalPrice {
+  font-size: $font-size-large;
+  font-weight: $font-weight-bold;
+
+  color: $clr-blackish-red;
+}

@@ -1,0 +1,119 @@
+@import '/src/utils/css/Variables';
+
+.item {  
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  
+  width: 100%;
+
+  padding-right: 1rem;
+
+  border-bottom: 1px solid rgba($clr-brown, .1);
+}
+
+.outerWrapper {  
+  width: min(150px, 100%);
+  
+  margin: .25rem 0;
+}
+
+.name {  
+  font-size: $font-size-default;
+  font-weight: $font-weight-normal;
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+
+  overflow: hidden;
+  width: 100%;
+
+  color: $clr-blackish-red;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.amount {
+  font-size: $font-size-default;
+  font-weight: $font-weight-normal;
+
+  color: $clr-red;
+}
+
+.priceWrapper {
+  display: flex;
+  flex-direction: row;
+  gap: .5rem; 
+  
+  color: $clr-brown; 
+}
+
+.singlePrice {
+  font-size: $font-size-small;
+  font-weight: $font-weight-thin;
+}
+
+.totalPrice {
+  font-size: $font-size-small;
+  font-weight: $font-weight-bold;
+}
+
+.removeButton {  
+  border: 2px solid $clr-brown;
+  border-radius: 50%;
+  
+  padding: 0;
+  margin-left: auto;
+  
+  aspect-ratio: 1 / 1;
+
+  background: transparent;
+
+  svg {
+    height: 20px;
+    width: 20px;
+    
+    padding: 4px;
+  }
+  
+  path {
+    fill: $clr-brown;
+  }
+
+  &:hover {
+    cursor: pointer;
+    border-color: $clr-red;
+
+    path {   
+      fill: $clr-red;
+    }
+  }
+}
+
+.cancelIcon {
+  &:hover {
+    path {   
+      fill: $clr-red;
+    }
+  }
+}
+
+.thumbnailWrapper {
+  min-height: 80px;
+  max-height: 80px;
+  min-width: 80px;
+  max-width: 80px;
+  
+  object-fit: contain;
+  
+  padding: .75rem;
+  margin-right: 1rem;
+}
+
+.thumbnail {
+  border-radius: $border-radius-subtle;
+}

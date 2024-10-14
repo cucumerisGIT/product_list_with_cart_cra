@@ -1,0 +1,27 @@
+@import '/src/utils/css/Variables';
+
+.buttonContainer {
+  @include button($clr-white, $clr-red, 1px solid $clr-blackish-red);
+}
+
+.changeButton {
+  aspect-ratio: 1 / 1;
+
+  border: 1px solid $clr-white;
+  border-radius: 50%;
+  
+  background: transparent;
+
+  @include button-hover($clr-white, $clr-red, 1px solid $clr-white);
+}
+
+.changeIcon {
+  height: 10px;
+  width: 10px;
+}
+
+// Without this the changeButton on the right starts to wobble at some numbers
+.amount {
+  flex: 1;
+  text-align: center;
+}

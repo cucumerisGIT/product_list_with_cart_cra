@@ -1,0 +1,42 @@
+/* COLORS */
+/* BREAKPOINTS */
+/* FONT */
+/* BORDER */
+/* PRODUCTS */
+/* SHIFTING */
+/* MIXINS */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1024px;
+}
+
+.title {
+  align-self: flex-start;
+  color: hsl(14, 65%, 9%);
+  font-size: 3rem;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: minmax(175px, 325px);
+  justify-items: center;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+@media (min-width: 700px) and (max-width: 1024px) {
+  .list {
+    grid-template-columns: repeat(2, minmax(175px, 325px));
+  }
+}
+@media (min-width: 1024px) {
+  .wrapper {
+    width: 100%;
+  }
+  .list {
+    grid-template-columns: repeat(3, minmax(175px, 325px));
+  }
+}
