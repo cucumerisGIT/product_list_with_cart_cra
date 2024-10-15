@@ -1,6 +1,6 @@
 import React, { createContext, ReactNode, useCallback, useEffect, useState } from 'react';
 import data from '../data.json';
-import ProductData from '../utils/scripts/ProductData';
+import ProductData, { mapData } from '../utils/scripts/ProductData';
 
 // Initialize the AppContext
 interface AppContextType {
@@ -25,7 +25,7 @@ const AppProvider: React.FC<AppProviderProps> = ({ children }) => {
   // Load and keep state of the product data
   const [productData, setProductData] = useState<ProductData[]>([]);
   useEffect(() => {
-    setProductData(data as ProductData[]);
+    setProductData(mapData(data));
     if (!productData || productData.length === 0) {
       console.error("No product data found");
     } else {
