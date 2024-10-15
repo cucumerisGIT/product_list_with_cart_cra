@@ -56,16 +56,15 @@ const ProductCard: React.FC<ProductCardProps> = ({
 					<img className={`${styles.image}  ${inCart ? styles['image--selected'] : ''}`} src={image.thumbnail} alt={name} />
 				</picture>
 				{inCart ? 
-					<CounterButton className={styles.button} onCountChanged={handleCountChanged} />
+					<CounterButton className={styles.button} productName={name} onCountChanged={handleCountChanged} />
 					:
-					<AddToCartButton className={styles.button} onCountChanged={handleCountChanged} />
+					<AddToCartButton className={styles.button} productName={name} onCountChanged={handleCountChanged} />
 				}
 			</div>
 
 			<p className={styles.category}>{category}</p>
 			<h2 className={styles.name}>{name}</h2>
 			<p className={styles.price}>${price.toFixed(2)}</p>
-
 		</article>
 	);
 }
