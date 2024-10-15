@@ -1,8 +1,7 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React from 'react';
 import styles from './ProductList.module.css'
 import ProductCard from './ProductCard/ProductCard';
 import ProductData from 'utils/scripts/ProductData';
-import { AppContext } from 'context/AppContext';
 
 interface ProductListProps {
 	products: ProductData[];
