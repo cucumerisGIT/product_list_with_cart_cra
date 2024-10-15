@@ -6,10 +6,6 @@ import ProductData from 'utils/scripts/ProductData';
 import CartList from 'components/CartList/CartList';
 import TotalPrice from 'components/TotalPrice/TotalPrice';
 
-interface ShoppingCartProps {
-	showThumbnail: boolean;
-}
-
 const ShoppingCart: React.FC = () => {
   const context = useContext(AppContext);
   if (!context) {
